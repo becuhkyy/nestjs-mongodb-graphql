@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { ApolloDriver } from '@nestjs/apollo';
 import { LessonModule } from './lesson/lesson.module';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { StudentModule } from './student/student.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       driver: ApolloDriver,
     }),
     LessonModule,
+    StudentModule,
   ],
 })
 export class AppModule {}
