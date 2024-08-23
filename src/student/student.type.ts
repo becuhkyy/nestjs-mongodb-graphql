@@ -9,5 +9,5 @@ export class StudentType {
   firstName: string;
 
   @Field()
-  lastname: string;
+  lastName: string;
 }
